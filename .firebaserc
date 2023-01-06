@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "softchecker-32d8e": {
+      "hosting": {
+        "SoftChecker": [
+          "softchecker-32d8e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "softchecker-32d8e"
+  }
+}

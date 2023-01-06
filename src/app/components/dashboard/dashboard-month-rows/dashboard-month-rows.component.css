@@ -1,0 +1,57 @@
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+mat-card {
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 1.5em;
+  padding: 0.7em;
+}
+
+.innerList {
+  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.profileImg {
+  border-radius: 5em;
+  width: 2.1em;
+}
+
+.completeLow {
+  color: red;
+}
+
+.completeMid {
+  color: orange;
+}
+
+.completeHigh {
+  color: green;
+}
+
+mat-card-content {
+  align-items: center;
+}
+
+.textBox {
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rowInner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

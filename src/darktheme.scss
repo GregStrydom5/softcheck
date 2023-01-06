@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+@import './dark-pallete.scss';
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */
+$dark-primary: mat-palette($dark-palette, 500);
+$dark-accent: mat-palette($dark-palette, A100);
+$dark-warn: mat-palette($dark-palette, A200);
+$dark-theme: mat-light-theme($dark-primary, $dark-accent, $dark-warn);
+@include angular-material-theme($dark-theme);

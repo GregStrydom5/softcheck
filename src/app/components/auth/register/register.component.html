@@ -1,0 +1,45 @@
+<div class="background">
+  <div class="login-container">
+    <div class="text-container">
+      <h1>Hey there!</h1>
+      <p>
+        Already have an account? Sign in by clicking the button below.
+      </p>
+      <button mat-button routerLink="/">Sign In</button>
+    </div>
+    <div class="form-container">
+      <h1>Welcome to SoftChecker Register</h1>
+      <h5>Register with your email</h5>
+      <form [formGroup]="registerForm" (ngSubmit)="register()" #regForm="ngForm" class="mainForm">
+        <div class="boxer">
+          <label>First Name: </label>
+          <input matInput type="text" formControlName="firstName" required>
+        </div>
+
+        <div class="boxer">
+          <label>Last Name: </label>
+          <input matInput type="text" formControlName="lastName" required>
+        </div>
+
+        <div class="boxer">
+          <label>Email: </label>
+          <input matInput type="email" formControlName="email" required>
+        </div>
+
+        <div class="boxer">
+          <label>Password: </label>
+          <input matInput type="password" formControlName="password" required>
+        </div>
+
+        <div class="boxer">
+          <label>Confirm Password: </label>
+          <input matInput type="password" formControlName="passwordConfirm" required>
+        </div>
+
+        <div class="boxer">
+          <button type="submit" [disabled]="!regForm.valid">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

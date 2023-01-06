@@ -1,0 +1,49 @@
+<section class="createForm" fxLayout="row">
+  <div class="sidebar" fxFlex="1 1 auto" fxLayout="column">
+    <div fxLayoutAlign="center center" class="imageBox">
+      <img src="../../../../assets/e92e58ec9d338a234945ae3d3ffd5be3.png" alt="Logo">
+    </div>
+    <div fxLayoutAlign="center center" fxLayout="column">
+      <h1><u>Did you know?</u></h1>
+      <p>You can add and remove testers at any time.</p>
+    </div>
+  </div>
+  <div class="mainbar" fxLayoutAlign="center center" fxFlex="8 8 auto" fxLayout="column">
+    <h2><u>ENTER CHECKSHEET DETAILS</u></h2>
+    <form [formGroup]="createForm" (ngSubmit)="createChecksheet()" #logForm="ngForm" class="realForm" fxLayout="column">
+      <mat-form-field>
+          <mat-label>Name: </mat-label>
+          <input ngModel class="inputs" matInput type="text" formControlName="name" required>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Add a Tester: </mat-label>
+          <mat-select (selectionChange)="addToAssigned($event)" ngModel class="inputs"  formControlName="testersAssigned" required>
+            <mat-option *ngFor="let name of names" [value]="name.value">
+              {{ name.viewValue }}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <div class="testersAssigned" *ngIf="testersAssigned.length > 0">
+          <div *ngFor="let name of testersAssigned">{{ name }}</div>
+      </div>
+      <div fxLayout="row" class="assignedBoxNotVisible"></div>
+      <mat-form-field>
+        <mat-label >Connect Version: </mat-label>
+        <input class="inputs" matInput type="text" formControlName="connectVersion" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Immerse Version: </mat-label>
+        <input class="inputs" matInput type="text" formControlName="immerseVersion" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Event Link: </mat-label>
+        <input class="inputs" matInput type="text" formControlName="eventLink" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Bug Doc: </mat-label>
+        <input class="inputs" matInput type="text" formControlName="bugDoc" required>
+      </mat-form-field>
+      <button type="submit" [disabled]="!createForm.valid">Create</button>
+    </form>
+  </div>
+</section>

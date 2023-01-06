@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a routerLink="/dashboard">SoftChecker</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li *ngIf="!(afAuth.user | async)"><a routerLink="register">Register</a></li>
+      <li *ngIf="!(afAuth.user | async)"><a routerLink="login">Login</a></li>
+      <li *ngIf="(afAuth.user | async)">
+        <a routerLink="/dashboard">
+          <mat-icon class="full-links" matTooltip="Home">home</mat-icon>
+        </a>
+      </li>
+      &nbsp;
+      <li *ngIf="(afAuth.user | async)">
+        <a routerLink="/create-checksheet">
+          <mat-icon class="full-links" matTooltip="Create a new checksheet">add</mat-icon>
+        </a>
+      </li>
+<!--      <li *ngIf="(afAuth.user | async)">-->
+<!--        <a routerLink="/welcome">-->
+<!--          <mat-icon class="full-links" matTooltip="Open an existing checksheet">folder</mat-icon>-->
+<!--        </a>-->
+<!--      </li>-->
+      <li *ngIf="(afAuth.user | async)">
+        <a routerLink="/profile/{{ userUID }}">
+          <mat-icon class="full-links" matTooltip="Profile">person_outline</mat-icon>
+        </a>
+      </li>
+      <li *ngIf="(afAuth.user | async)">
+        <a (click)="onLogout()">
+          <mat-icon class="full-links" matTooltip="Logout">logout</mat-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

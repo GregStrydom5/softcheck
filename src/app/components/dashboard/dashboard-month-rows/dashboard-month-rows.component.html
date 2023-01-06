@@ -1,0 +1,28 @@
+<section class="mainContainer" fxLayout="column">
+  <div class="headerContainer">
+    <div class="textBox">Date</div>
+    <div class="textBox">Assigned</div>
+    <div class="textBox">% Complete</div>
+    <div class="textBox">Issues</div>
+    <div class="textBox">View</div>
+    <div class="textBox">Test</div>
+    <div class="textBox">Delete</div>
+  </div>
+  <br />
+
+  <div class="rowsContainer" fxLayout="column" fxLayoutGap="1em">
+    <mat-card *ngFor="let checksheet of checkSheets"  class="innerList">
+      <mat-card-content>
+        <div class="rowInner">
+          <div class="textBox">{{ checksheet.name}}</div>
+          <div class="textBox"><a *ngFor="let tester of checksheet.testersIcons" routerLink="/profile/{{ this.testerId }}"><img class="profileImg" alt="Profile Pic" src="{{tester}}"></a></div>
+          <div class="textBox" [ngClass]="{'completeLow': true, 'completeMid': false, 'completeHigh': false}">{{ checksheet.percentComplete}}</div>
+          <div class="textBox">{{ checksheet.numIssues}}</div>
+          <div class="textBox" matTooltip="View checksheet details"><a routerLink="/view-checksheet/{{ checksheet.id }}"><mat-icon>pageview</mat-icon></a></div>
+          <div class="textBox" matTooltip="Continue testing"><a routerLink="/test-checksheet/{{ checksheet.id }}"><mat-icon>ios_share</mat-icon></a></div>
+          <div class="textBox" matTooltip="Delete checksheet" (click)="deleteChecksheet(checksheet.id)"><mat-icon>delete</mat-icon></div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

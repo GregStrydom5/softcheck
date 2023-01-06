@@ -1,0 +1,144 @@
+.head-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 4em;
+  z-index: 100;
+  width: 100%;
+}
+
+::ng-deep .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: black !important;
+}
+.circle-percent-green {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  background-color: #3cd934;
+  border-radius: 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-percent-red {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  background-color: red;
+  border-radius: 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+  background-color: skyblue;
+  border: 1px solid black;
+  border-radius: 1%;
+}
+
+.box-immerse {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+  background-color: lightpink;
+  border: 1px solid black;
+}
+
+.side-box-1 {
+  font-size: 1.5em;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.side-box-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  vertical-align: middle;
+  background-color: skyblue;
+}
+
+.side-box-2-immerse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  padding: 1em;
+  border: 1px solid black;
+  vertical-align: middle;
+  background-color: lightpink;
+}
+
+.content-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rotate {
+  display: inline-block;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: white;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 1em;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sectionTableData {
+  padding: 0.5em;
+}
+
+.sectionTableRow {
+  padding: 0.5em;
+}
+
+.checkTable td {
+  text-align: center;
+}
+
+.spacer {
+  width: 100%;
+  height: 10em;
+}
+
+.tableHead {
+
+}
+
+.textTable {
+  font-size: 0.9em;
+  width: 100%;
+}

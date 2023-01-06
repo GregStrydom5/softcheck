@@ -1,0 +1,9 @@
+<section class="mainContainer" fxLayout="column">
+  <div class="rowsContainer" fxLayout="column" fxLayoutGap="1em">
+    <mat-card *ngFor="let detail of sectionDetailsObservable | async"  class="innerList">
+      <mat-card-content fxLayout="row">
+        <div fxFlex>{{ detail.description }}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

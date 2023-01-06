@@ -1,0 +1,97 @@
+.gList {
+  width: 90%;
+  margin: 0 auto;
+  vertical-align: middle;
+  margin-top: 5em;
+}
+
+.head-title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.tile1 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile2 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile3 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile4 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile5 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile6 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile7 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile8 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile9 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+.tile10 {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid cornflowerblue;
+}
+
+mat-grid-tile span {
+  font-weight: bold;
+  font-size: 1em;
+  font-family: Calibri, serif;
+}
+
+mat-card {
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.connectColor {
+  color: cornflowerblue;
+}

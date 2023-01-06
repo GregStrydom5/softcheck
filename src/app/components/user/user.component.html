@@ -1,0 +1,45 @@
+<div class="mainContainer">
+  <div class="nameContainer">
+    <div><h2>{{ userData['displayName'] }}</h2></div>
+  </div>
+  <div class="imageContainer">
+    <img src="../../../assets/profile.png" alt="placeholder">
+  </div>
+  <hr>
+  <div class="socialContainer">
+    <div class="socialLink">
+      <a href="{{ userData.facebookUrl }}" target="_blank"><img src="../../../assets/social/icons8-facebook-48.png" alt="Facebook"></a>
+    </div>
+    <div class="socialLink">
+      <a href="{{ userData.twitterUrl }}" target="_blank"><img src="../../../assets/social/icons8-twitter-48.png" alt="Twitter"></a>
+    </div>
+    <div class="socialLink">
+      <a href="{{ userData.instagramUrl }}" target="_blank"><img src="../../../assets/social/icons8-instagram-logo-48.png" alt="Instagram"></a>
+    </div>
+    <div class="socialLink">
+      <a href="{{ userData.linkedinUrl }}" target="_blank"><img src="../../../assets/social/icons8-linkedin-48.png" alt="LinkedIn"></a>
+    </div>
+  </div>
+  <div class="infoContainer">
+  <div class="info1Container">
+    <div>Sheets Assigned:</div>
+    <div><strong>{{ userData.sheetsCreated }}</strong></div>
+  </div>
+  <div class="info2Container" fxLayout="row">
+    <div>Date Joined:</div>
+    <div><strong>{{ userData.dateJoined }}</strong></div>
+  </div>
+    <div>
+      <div>Errors Found:</div>
+      <div><strong>{{ userData.errorsFound }}</strong></div>
+    </div>
+  <div class="info3Container" fxLayout="row">
+    <div>Role:</div>
+    <div><strong>{{ userData.userRole }}</strong></div>
+  </div>
+    <div>
+      <div>Rank:</div>
+      <div><strong>{{ userData.userRank }}</strong></div>
+    </div>
+    </div>
+</div>

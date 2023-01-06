@@ -1,0 +1,135 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100vh;
+}
+
+.titleContainer {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  justify-content: center;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid black;
+  height: 90vh;
+}
+
+.topDiv {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.descriptionDiv {
+  width: 50%;
+}
+
+.outcomeDiv {
+  width: 50%;
+}
+
+.leftDiv {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  border: 1px solid black;
+}
+
+.leftInner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.windows {
+  width: 50%;
+}
+
+.mac {
+  width: 50%;
+}
+
+.rightDiv {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.browserContainer {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.browsericon {
+  border: 1px solid black;
+}
+
+.browsericon img {
+  max-width: 75%;
+}
+
+.rightTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightBottom {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.rightBottomLeft {
+  width: 50%;
+}
+
+.rightBottomRight {
+  width: 50%;
+}
+
+.box1 {
+  width: 100%;
+}
+
+.box2 {
+  width: 100%;
+}
+
+.checkicon {
+  width: 25%;
+  border: 1px solid black;
+}
+
+.bottomDiv {
+  display: flex;
+  border: 1px solid black;
+}
+
+.systemIcon {
+  max-width: 200px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.navButton {
+  min-width: 120px;
+  max-width: 120px;
+}

@@ -1,0 +1,56 @@
+a { color:#5D5D9E; } 
+a:visited { color:#5D5D9E; } 
+a:active { color:#5C615E; } 
+a:hover { color:#B2B3B4; } 
+body { background-color:#FFFFFF; padding:0;  margin: 0; }
+.textstyle1 { text-align:left; }
+#container_1ccbda6e { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:150px; background-color:#49424A;  }
+#container_1ccbda6e_padding { margin: 10px; display: block;  }
+#container_433edc8a { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:150px; background:none;  }
+#container_433edc8a_padding { margin: 10px; display: block;  }
+#container_64589801 { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_64589801_padding { margin: 10px; display: block;  }
+.textstyle2 { text-align:center; }
+#img_11886076 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_9faa198 { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_9faa198_padding { margin: 10px; display: block;  }
+#img_18bafa13 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_78abf229 { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_78abf229_padding { margin: 10px; display: block;  }
+#img_19e12fcd { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_2641576f { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_2641576f_padding { margin: 10px; display: block;  }
+#img_1e24092a { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_78250f0d { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_78250f0d_padding { margin: 10px; display: block;  }
+#img_824b883 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_6cea8c18 { vertical-align: top; position:relative; display: inline-block; width:100%; min-height:150px; background:none;  }
+#container_6cea8c18_padding { margin: 10px; display: block;  }
+#container_1287e519 { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_1287e519_padding { margin: 10px; display: block;  }
+#img_353946e3 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_1497f3b4 { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_1497f3b4_padding { margin: 10px; display: block;  }
+#img_1bdf4e8c { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_6372ef2c { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_6372ef2c_padding { margin: 10px; display: block;  }
+#img_6409f847 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_1354b0f { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_1354b0f_padding { margin: 10px; display: block;  }
+#img_48916986 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+#container_6a10eded { vertical-align: top; position:relative; display: inline-block; width:20%; min-height:150px; background:none;  }
+#container_6a10eded_padding { margin: 10px; display: block;  }
+#img_78567fe5 { vertical-align: bottom; position:relative; display: inline-block; width:50%; background:none;  }
+@media only screen and (max-width: 1000px)
+{
+		#container_64589801 { width:100%;  }
+		#container_9faa198 { width:100%;  }
+		#container_78abf229 { width:100%;  }
+		#container_2641576f { width:100%;  }
+		#container_78250f0d { width:100%;  }
+		#container_1287e519 { width:100%;  }
+		#container_1497f3b4 { width:100%;  }
+		#container_6372ef2c { width:100%;  }
+		#container_1354b0f { width:100%;  }
+		#container_6a10eded { width:100%;  }
+}

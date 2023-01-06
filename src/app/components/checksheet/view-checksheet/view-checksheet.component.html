@@ -1,0 +1,1874 @@
+<div class="main-container">
+  <div class="head-section">
+    <div class="head-box-1">
+      <h2>{{ checksheetData.name }}</h2>
+      <div class="tester-list">
+
+      </div>
+    </div>
+    <div class="head-box-2">
+      <table>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Name:</strong> </td><td>{{ checksheetData.name }}</td>
+          <td class="sectionTableData"><strong>Word Doc:</strong> </td><td><a href="{{ checksheetData.bugDoc }}">Bug Doc</a></td>
+        </tr>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Connect:</strong> </td><td>{{ checksheetData.connectVersion }}</td>
+          <td class="sectionTableData"><strong>Immerse:</strong> </td><td>{{ checksheetData.immerseVersion }}</td>
+        </tr>
+        <tr class="sectionTableRow">
+          <td class="sectionTableData"><strong>Event:</strong> </td><td><a href="{{ checksheetData.eventLink }}">Event Link</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="head-box-3">
+      <div [ngClass]="checksheetData.percentComplete > 50 ? 'circle-percent-green' : 'circle-percent-red'">
+        <div><h3>{{ checksheetData.percentComplete }}%</h3></div>
+        <div>Complete</div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="main-content">
+
+<!--    == INITIAL REGISTRATION ==-->
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+
+      <div class="side-box-2">
+        <span class="rotate"><strong>Registration</strong></span>
+      </div>
+
+      <div class="content-main">
+          <div class="box-header">
+            Initial registration and account setup
+          </div>
+          <div class="box-row">
+              <table class="textTable">
+                <tr class="tableHead">
+                  <th></th>
+                  <th></th>
+                  <th>PC</th>
+                  <th>MAC</th>
+                  <th>&nbsp;</th>
+                  <th>Chrome</th>
+                  <th>Edge</th>
+                  <th>Opera</th>
+                  <th>Firefox</th>
+                  <th>&nbsp;&nbsp;</th>
+                  <th>Doc Num</th>
+                </tr>
+                <tr>
+                  <td>Look and feel of Website</td>
+                  <td>Should be easy to navigate and welcoming</td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[0].pc"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()"></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[0].chrome"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[0].edge"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[0].firefox"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[0].opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Book a demo button</td>
+                  <td>Book a demo button should open a Calendly link.</td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[1].pc"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()"></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[1].edge"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[1].chrome"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[1].firefox"></mat-checkbox></td>
+                  <td><mat-checkbox (click)="$event.preventDefault()" [checked]="checksheetRegistration[1].opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[1].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Is the help desk button present and working</td>
+                  <td>Located on the bottom right</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Are you able to find registration area easily</td>
+                  <td>Should not take more than 2 minutes</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Create an account filling in all areas </td>
+                  <td>Was able to create account</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Create an account but not not add in all required fields</td>
+                  <td>NOT able to create an account</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Any overlapping</td>
+                  <td>No elements on the page should overlap</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Change the password to your account (Lost password)</td>
+                  <td>Email with links received, able to easily reset password</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Log In to your account</td>
+                  <td>Account is accessed easily, without loading issues, to the right account</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+                <tr>
+                  <td>Can you download Immerse (are the requirements still accurate)</td>
+                  <td>No issues when downloading</td>
+                  <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                  <td><mat-checkbox></mat-checkbox></td>
+                  <td></td>
+                  <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                  <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                  <td></td>
+                  <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+                </tr>
+            <tr>
+          </table>
+        </div>
+        </div>
+    </div>
+
+<!--    PROFILE SETUP-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+
+      <div class="side-box-2">
+        <span class="rotate"><strong>Registration</strong></span>
+      </div>
+
+      <div class="content-main">
+        <div class="box-header">
+          Profile setup and editing
+        </div>
+        <div class="box-row">
+          <table class="textTable">
+            <tr class="tableHead">
+              <th></th>
+              <th></th>
+              <th>PC</th>
+              <th>MAC</th>
+              <th>&nbsp;</th>
+              <th>Chrome</th>
+              <th>Edge</th>
+              <th>Opera</th>
+              <th>Firefox</th>
+              <th>&nbsp;&nbsp;</th>
+              <th>Doc Num</th>
+            </tr>
+            <tr>
+              <td>Change your details (Check that it is changing in Immerse as well)</td>
+              <td>Changing your profile on connect should adjust it in immerse at the same time (this should go both ways)</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Are the privacy toggles working (Second tester to check the player card)</td>
+              <td>This enables and disables the info on a player card (Connect & Immerse) in real time. </td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Profile page - look and feel </td>
+              <td>Is the page easy to use and understand</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Do the privacy toggles on and off </td>
+              <td>This should hide the info you have toggled off, it should be hidden on your player card in both Immerse and Connect</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Does the profile tutorial work</td>
+              <td>No glitch's or breaks</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Can you change your profile picture </td>
+              <td>Profile picture should be changed on Connect and all player cards, and be changed in the Immerse Launcher</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+
+            <tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<!--    SUPPORT DESK-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+
+      <div class="side-box-2">
+        <span class="rotate"><strong>Registration</strong></span>
+      </div>
+
+      <div class="content-main">
+        <div class="box-header">
+          Support Desk
+        </div>
+        <div class="box-row">
+          <table class="textTable">
+            <tr class="tableHead">
+              <th></th>
+              <th></th>
+              <th>PC</th>
+              <th>MAC</th>
+              <th>&nbsp;</th>
+              <th>Chrome</th>
+              <th>Edge</th>
+              <th>Opera</th>
+              <th>Firefox</th>
+              <th>&nbsp;&nbsp;</th>
+              <th>Doc Num</th>
+            </tr>
+            <tr>
+              <td>Can you send through a help ticket</td>
+              <td>Support to check if a help ticket was created on zendesk</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Do you receive automated responses and do they work.</td>
+              <td>Response should be received by email</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Can you see the replies in your email</td>
+              <td>Self explanatory</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+            <tr>
+              <td>Do the out of hours responses work</td>
+              <td>Self explanatoryt</td>
+              <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+              <td><mat-checkbox></mat-checkbox></td>
+              <td></td>
+              <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+              <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+              <td></td>
+              <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+<!--    EVENTS-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Registration</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Events</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you find all the events</td>
+                  <td>All events active on the platform should be listed</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you join an event through the invite link </td>
+                  <td>Make sure you are able to join the event using the link and that you are not able to.</td>
+                </tr>
+                <tr>
+                  <td>Can you search for events</td>
+                  <td>All relevant events should be listed when searching</td>
+                </tr>
+                <tr>
+                  <td>Are invite only events locked without a link</td>
+                  <td>You should not be able to join an invite only event without the link</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    COMPANY SETUP-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Company Setup</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Company Setup</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you send a join request to a company.</td>
+                  <td>The owner of the org should receive a notification in their admin panel.</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you see the join request in the admin hub</td>
+                  <td>There should be a red notification with the amount of requests</td>
+                </tr>
+                <tr>
+                  <td>Can you delete the request</td>
+                  <td>The sender should have to resend the request and it should be removed from the admin hub</td>
+                </tr>
+                <tr>
+                  <td>Can you create a company</td>
+                  <td>You should be able to create a company and enter all information</td>
+                </tr>
+                <tr>
+                  <td>Can you edit a company</td>
+                  <td>You should be able to edit any and all information for the company</td>
+                </tr>
+                <tr>
+                  <td>Can you delete a company</td>
+                  <td>The company should be removed and not come up during a search.</td>
+                </tr>
+                <tr>
+                  <td>Do the company social media links work</td>
+                  <td>You should be taken the provided url when clicked</td>
+                </tr>
+                <tr>
+                  <td>Can you accept a join request from a user to your company</td>
+                  <td>Once accepted the user should be a part of that company</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    EVENT CREATION-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Event Creation</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Event Creation</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you create an event</td>
+                  <td>Event should be created and found in the admin events tab and in the find events tab</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you see the media you upload instantly.</td>
+                  <td>Media you upload should be uploaded instantly and stick when refreshing the page</td>
+                </tr>
+                <tr>
+                  <td>Can you create sessions and assign them to the correct rooms (please check in immerse)</td>
+                  <td>While a session is playing it should be streamed into the room assigned during event creation</td>
+                </tr>
+                <tr>
+                  <td>Can you make Networking Zones with Min 2 and Max 10 people</td>
+                  <td>Should not be able to add more than 10 people or less than 2</td>
+                </tr>
+                <tr>
+                  <td>Can you create the 3D platform</td>
+                  <td>Should not have a 3D platform if selected no - Check in immerse that the registered event is not in the event list. </td>
+                </tr>
+                <tr>
+                  <td>Does assigning booth locations assign the right locations (Please check in immerse)</td>
+                  <td>The booths should be in the right locations in Immerse </td>
+                </tr>
+                <tr>
+                  <td>Is the time zone correct and does it correspond with other time zones </td>
+                  <td>if time is set in BST, it should be calculated to the correct time zones that are set in your profile settings</td>
+                </tr>
+                <tr>
+                  <td>Did you fully create an event on connect that was then reflected into Immerse</td>
+                  <td>Check that it is located both in connect and immerse with the same uploaded info. </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    BOOTH SETUP-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Booth Setup</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Booth Setup</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you edit booths</td>
+                  <td>They should stick even after refreshing page</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you upload all booth images</td>
+                  <td>Images should upload to banner and icon instantly</td>
+                </tr>
+                <tr>
+                  <td>Do the event details and Images stick </td>
+                  <td>Everything should stick and stay when refreshing and or closing (Use ctrl f5) </td>
+                </tr>
+                <tr>
+                  <td>Does the booth owner receive an email notification when they are assigned</td>
+                  <td>Should receive an email and a button taking you straight to your booth</td>
+                </tr>
+                <tr>
+                  <td>Can you upload videos</td>
+                  <td>Videos should be easily uploaded to </td>
+                </tr>
+                <tr>
+                  <td>Can you upload brochures - Should not be able to upload private file urls</td>
+                  <td>Brochures should be able to be downloaded and uploaded easily</td>
+                </tr>
+                <tr>
+                  <td>Do all the links lead to the correct social media/websites</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the info show on the booth info card</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    CHAT SYSTEM-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Chat System</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Chat System</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Is the chat tab easy to find</td>
+                  <td>Should be pretty easy to find</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can both parties see the messages</td>
+                  <td>Both people should see the messages being sent and received</td>
+                </tr>
+                <tr>
+                  <td>Does chat retain it's history</td>
+                  <td>Chat from previously should be displayed per room</td>
+                </tr>
+                <tr>
+                  <td>Does the platform notify you of messages incoming</td>
+                  <td>Blinking notification should appear</td>
+                </tr>
+                <tr>
+                  <td>Does the notification go away after you open the message </td>
+                  <td>Blinking notification should disappear </td>
+                </tr>
+                <tr>
+                  <td>Does the search history work</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the profanity filter work </td>
+                  <td>Should not be able to use any swears, racial, sexist or sexual language </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    SOCIAL SYSTEM-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Social System</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Social System</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you click on player card to add a friend</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you chat with that friend</td>
+                  <td>Clicking on a contact should open the player card, where you can select chat from</td>
+                </tr>
+                <tr>
+                  <td>Do your friends show up in your friend list</td>
+                  <td>Do people you add instantly appear in your friends list </td>
+                </tr>
+                <tr>
+                  <td>Can you check the socials from the players card</td>
+                  <td>Can you go to the users linked social media</td>
+                </tr>
+                <tr>
+                  <td>Do player cards have About me info </td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    LOBBY-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Lobby</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Lobby</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>If you see people online, are they online</td>
+                  <td>People online should have a green orb next to their name, people offline should have a red orb</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you send and receive messages</td>
+                  <td>Both users should be able to see and send messages</td>
+                </tr>
+                <tr>
+                  <td>Profanity filter working</td>
+                  <td>Should not be able to use any swears, racial, sexist or sexual language</td>
+                </tr>
+                <tr>
+                  <td>Do the sponsors show and are they the correct sponsors</td>
+                  <td>When making a booth a sponsor they are given promotion and advertising all over the event, make sure if a booth is a sponsor its seen on the right side of the lobby tab</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    NETWORKING-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Networking</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Networking</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you change the network pod image</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you join the network session pod</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you change your microphone and webcam before entering the call</td>
+                  <td>do the selected microphone and camera stick when changing</td>
+                </tr>
+                <tr>
+                  <td>Can you share your screen with audio </td>
+                  <td>you should be able to screenshare with audio on Edge,Chrome and Opera</td>
+                </tr>
+                <tr>
+                  <td>If the network pod is full, can you join</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you share your screen with sound</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    SESSIONS-->
+
+    <div class="box">
+      <div class="side-box-1">
+        C<br />O<br />N<br />N<br />E<br />C<br />T
+      </div>
+      <div class="side-box-2">
+        <span class="rotate"><strong>Sessions</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Sessions</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you see who are the speakers and their info before joining in</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you join a session</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you use the chat to send and receive messages</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you send to the Q&A</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Q&a questions sent through connect are visible in platform</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you succesfully Answer and or Archive a question</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you speak in a session as a speaker</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you hear other speakers speaking in the control pannel before going live</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Can you share your screen</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the session speaker receive an email notification when they are assigned</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the email take them straight to their session</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Are the session times correct</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the session run through to immerse in the right room</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Do sessions go live in immerse and connect at the same time</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does the control panel work from immerse to connect</td>
+                  <td>One person controlling the panel from either platform should reflect on the other platform</td>
+                </tr>
+                <tr>
+                  <td>Does RTMP work</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Does uploading videos work</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--    IMMERSE-->
+
+<!--    LAUNCHER-->
+
+    <div class="box-immerse">
+      <div class="side-box-1">
+        I<br />M<br />M<br />E<br />R<br />S<br />E
+      </div>
+      <div class="side-box-2-immerse">
+        <span class="rotate"><strong>Launcher</strong></span>
+      </div>
+      <div class="content-main">
+        <div class="contentContainer">
+          <div class="content-box-1">
+            <div class="box-header">
+              <h3>Launcher</h3>
+            </div>
+            <div class="box-row">
+              <div class="header-row"></div>
+              <table>
+                <tr>
+                  <td>Can you send through a help ticket </td>
+                  <td>To be checked on Zendesk.</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Are the privacy toggles working (Second tester to check the player card)</td>
+                  <td>This enables and disables the info on a player card (Connect & Immerse) in real time. </td>
+                </tr>
+                <tr>
+                  <td>Profile page - look and feel </td>
+                  <td>Is the page easy to use and understad</td>
+                </tr>
+                <tr>
+                  <td>Do the privacy toggles on and off </td>
+                  <td>This should hide the info you have toggled off, it should be hidden on your player card in both Immerse and Connect</td>
+                </tr>
+                <tr>
+                  <td>Does the profile tutorial work</td>
+                  <td>No glitch's or breaks</td>
+                </tr>
+                <tr>
+                  <td>Can you change your profile picture </td>
+                  <td>Profile picture should be changed on Connect and all player cards, and be changed in the Immerse Launcher</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="content-box-2-immerse">
+            <table class="checkTable">
+              <tr>
+                <th>PC</th>
+                <th>MAC</th>
+                <th>&nbsp;</th>
+                <th>Chrome</th>
+                <th>Edge</th>
+                <th>Opera</th>
+                <th>Firefox</th>
+                <th>&nbsp;&nbsp;</th>
+                <th>Doc Num</th>
+              </tr>
+              <tr>
+                <td><mat-checkbox [checked]="checksheetData.pc"></mat-checkbox></td>
+                <td><mat-checkbox></mat-checkbox></td>
+                <td></td>
+                <td><mat-checkbox [checked]="checksheetData.edge"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.chrome"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.firefox"></mat-checkbox></td>
+                <td><mat-checkbox [checked]="checksheetData.opera"></mat-checkbox></td>
+                <td></td>
+                <td><a href="">{{ checksheetRegistration[0].bugDocNum}}</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc2"></td>
+                <td><input type="checkbox" id="mac2"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome2"></td>
+                <td><input type="checkbox" id="edge2"></td>
+                <td><input type="checkbox" id="opera2"></td>
+                <td><input type="checkbox" id="firefox2"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc3"></td>
+                <td><input type="checkbox" id="mac3"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome3"></td>
+                <td><input type="checkbox" id="edge3"></td>
+                <td><input type="checkbox" id="opera3"></td>
+                <td><input type="checkbox" id="firefox3"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc4"></td>
+                <td><input type="checkbox" id="mac4"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome4"></td>
+                <td><input type="checkbox" id="edge4"></td>
+                <td><input type="checkbox" id="opera4"></td>
+                <td><input type="checkbox" id="firefox4"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc5"></td>
+                <td><input type="checkbox" id="mac5"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome5"></td>
+                <td><input type="checkbox" id="edge5"></td>
+                <td><input type="checkbox" id="opera5"></td>
+                <td><input type="checkbox" id="firefox5"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc6"></td>
+                <td><input type="checkbox" id="mac6"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome6"></td>
+                <td><input type="checkbox" id="edge6"></td>
+                <td><input type="checkbox" id="opera6"></td>
+                <td><input type="checkbox" id="firefox6"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="pc7"></td>
+                <td><input type="checkbox" id="mac7"></td>
+                <td></td>
+                <td><input type="checkbox" id="chrome7"></td>
+                <td><input type="checkbox" id="edge7"></td>
+                <td><input type="checkbox" id="opera7"></td>
+                <td><input type="checkbox" id="firefox7"></td>
+                <td></td>
+                <td><a href="">4</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

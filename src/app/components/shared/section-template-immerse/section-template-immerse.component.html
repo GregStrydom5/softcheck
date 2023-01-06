@@ -1,0 +1,62 @@
+<div class="mainContainer">
+  <div class="titleContainer">
+    <h1>{{ sectionContent.title }}</h1>
+  </div>
+  <div class="contentContainer">
+    <div class="topDiv">
+      <div class="descriptionDiv">
+        <h4><u>Description</u></h4>
+        <p>{{ sectionContent.task }}</p>
+      </div>
+      <div class="outcomeDiv">
+        <h4><u>Outcome</u></h4>
+        <p>{{ sectionContent.outcome }}</p>
+      </div>
+    </div>
+    <div class="bottomDiv">
+      <div class="leftDiv">
+        <div class="leftInner">
+          <div class="windows">
+            <h3>Working on PC</h3>
+            <div class="box1">
+              <img alt="windows_logo" src="assets/browsericons/windows.png" class="systemIcon" (click)="updateConnectPC(checksheetId, $event)">
+            </div>
+            <div class="box2">
+              <img alt="working_image" [src]="sectionContent.pc ? 'assets/browsericons/checkmark.png' : 'assets/browsericons/red-cross-mark.png'">
+            </div>
+          </div>
+          <div class="mac">
+            <h3>Working on MAC</h3>
+            <div class="box1">
+              <img alt="mac_logo" src="assets/browsericons/mac.png" class="systemIcon" (click)="updateConnectMac($event)">
+            </div>
+            <div class="box2">
+              <img alt="working_image" [src]="sectionContent.mac ? 'assets/browsericons/checkmark.png' : 'assets/browsericons/red-cross-mark.png'">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightDiv">
+        <div class="rightBottom">
+          <div class="rightBottomLeft">
+            <h3>Bug Doc Num</h3>
+            <h2>4</h2>
+          </div>
+          <div class="rightBottomRight">
+            <h3>Notes</h3>
+            <a routerLink="/add-note/connectsection-test/:id"><button (click)="addNote()">Add</button></a>
+            <a routerLink="/view-notes/connection-tests/:id"><button (click)="viewNotes()">View</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttonContainer">
+    <div *ngIf="sectionContent.sectionId > 1" class="previousButton">
+      <a routerLink="/test-connect-registration/{{ checksheetId }}/registration/{{ sectionContent.sectionId < 1 ? 1 : sectionContent.sectionId-1 }}"><button class="navButton" mat-button color="primary">Previous</button></a>
+    </div>
+    <div *ngIf="sectionContent.sectionId < totalSectionCount" class="nextButton">
+      <a routerLink="/test-connect-registration/{{ checksheetId }}/registration/{{ sectionContent.sectionId+1 }}"><button class="navButton" mat-button color="primary">Next</button></a>
+    </div>
+  </div>
+</div>
